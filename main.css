@@ -1,0 +1,136 @@
+html, body {
+  color: white;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji","Hatton Bold";
+  background-color: #1f0655;
+  background-image: url(https://demo.roboflow.com/images/flow.svg), linear-gradient(0deg, #f90d0d, #f7db0b 125%);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body video {
+  transition: filter 250ms linear;
+}
+
+body.loading video {
+  filter: grayscale(0) brightness(1);
+}
+
+body.loading:before {
+  color: white;
+  text-align: center;
+  width: 100%;
+  top: 20px;
+  font-size: 3em;
+  font-weight: bold;
+  z-index: 100;
+}
+
+html, body, video, canvas {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+video, canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+body:after {
+  bottom: 20px;
+  right: 20px;
+  width: 350px;
+  height: 150px;
+  z-index: 1;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
+#fps {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+}
+
+#fps:empty {
+  display: none;
+}
+
+#fps:after {
+  content: " fps";
+}
+
+#camerabutton {
+  position: relative;
+    margin: 10px;
+    z-index: 999;
+    border: black;
+    border-radius: 100%;
+    padding: 30px;
+    cursor: pointer;
+
+}
+
+#camerabutton:hover {
+
+box-shadow: 1px 5px black;
+
+}
+
+#snp-button {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#snp-button:hover {
+  outline:0px;
+}
+
+row#button-area {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    position: relative;
+    top: 40%;
+}
+
+row#header {
+  background-image: linear-gradient(to bottom right, red, yellow);
+    z-index: 996;
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.hide {
+  display: none;
+}
+
+h1 {
+  font-size: 1.3em;
+  margin-bottom: 0.5em;
+  font-family: math !important;
+}
+
